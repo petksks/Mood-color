@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react"
-import Footer from "./"
+import Footer from "."
 
 describe("The footer is rendered and contains a link and the correct email address.", () => {
 	test("renders a link element", () => {

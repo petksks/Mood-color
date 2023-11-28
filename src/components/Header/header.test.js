@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react"
-import Header from "./"
+import Header from "."
 
 describe("Renders title and sub title on the header component.", () => {
 	test("renders page title", () => {
