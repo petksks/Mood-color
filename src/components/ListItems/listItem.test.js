@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react"
 import ListItems from "."
-import { Color } from "../../constants"
+import { Color } from '../../constants/colors'
 
 describe("ListItems component is rendered and maps out an array.", () => {
 	test("renders color container element", () => {
