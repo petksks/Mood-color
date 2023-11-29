@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react"
-import AddColor from "./"
+import AddColor from "."
 
 describe("A button and an input field are rendered.", function () {
 	test("button is rendered", () => {
@@ -23,7 +23,7 @@ describe("Incorrect hexcodes render an error message containing the input.", fun
 	test("valid submitted hexcode does not render an error message", () => {
 		render(<AddColor onColorArrayChange={onColorArrayChangeMock} />)
 		const inputField = screen.getByRole("textbox")
-		const validHexColor = "1a2b3c"
+		const validHexColor = "#1a2b3c"
 
 		fireEvent.change(inputField, { target: { value: validHexColor } })
 		fireEvent.submit(screen.getByRole("form"))
@@ -66,7 +66,7 @@ describe("Not valid input renders an error message element with the input", func
 	test("valid submitted hexcode does not show the error message", () => {
 		render(<AddColor onColorArrayChange={onColorArrayChangeMock} />)
 		const inputField = screen.getByRole("textbox")
-		const validHexColor = "1a2b3c"
+		const validHexColor = "#1a2b3c"
 
 		fireEvent.change(inputField, { target: { value: validHexColor } })
 		fireEvent.submit(screen.getByRole("form"))
