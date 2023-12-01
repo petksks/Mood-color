@@ -8,11 +8,12 @@ const AddColor = ({ onColorArrayChange }) => {
 
         if (!/^#([0-9A-F]{3}){1,2}$/i.test(hexColor)) {
             showMessage(errorMessage, `Invalid color: ${hexColor}`, true);
+            showMessage(validMessage, `Color added: ${hexColor}`, false);
             inputField.value = '';
             return;
         }
 
-        onColorArrayChange(hexColor);
+        onColorArrayChange({ name: `My Color ${Math.random()}`, hex: hexColor },);
         showMessage(errorMessage, `Invalid color: ${hexColor}`, false);
         showMessage(validMessage, `Color added: ${hexColor}`, true);
         inputField.value = '';

@@ -1,6 +1,6 @@
-const Header = ({ title}) => {
+const Header = ({ title, 'data-testid': testId}) => {
     return (
-        <div className="header">
+        <div className="header" data-testid={testId}>
             <h1>{title}</h1>
             <h2>Subtitle texty</h2>
         </div>

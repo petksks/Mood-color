@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react"
 import App from "./App"
-import { Color } from "./constants"
+import { Color } from "./constants/colors"
 
 describe("Renders all components, Header, ListItems, AddColor and Footer.", function () {
 	test("renders Header component", () => {
@@ -48,7 +48,7 @@ describe("Submitting a correct hexcode adds that color to the color array and re
 	test("valid submitted hexcode adds a color to the color array and does not show error message", () => {
 		render(<App />)
 		const inputField = screen.getByRole("textbox")
-		const validHexColor = "1a2b3c"
+		const validHexColor = "#1a2b3c"
 
 		fireEvent.change(inputField, { target: { value: validHexColor } })
 		fireEvent.submit(screen.getByRole("form"))
@@ -63,7 +63,7 @@ describe("Submitting a correct hexcode adds that color to the color array and re
 	test("valid submitted hexcode adds that color to the color array as 'My Color 1' and renders that color", () => {
 		render(<App />)
 		const inputField = screen.getByRole("textbox")
-		const validHexColor = "1a2b3c"
+		const validHexColor = "#1a2b3c"
 
 		fireEvent.change(inputField, { target: { value: validHexColor } })
 		fireEvent.submit(screen.getByRole("form"))
@@ -72,6 +72,6 @@ describe("Submitting a correct hexcode adds that color to the color array and re
 		const colorId = screen.getByText("My Color 1")
 
 		expect(colorId).toBeInTheDocument()
-		expect(colorBox).toHaveStyle(`background-color: #${validHexColor}`)
+		expect(colorBox).toHaveStyle(`background-color: ${validHexColor}`)
 	})
 })
