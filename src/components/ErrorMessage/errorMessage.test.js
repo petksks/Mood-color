@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react"
-import ErrorMessage from "./"
+import ErrorMessage from "."
 
 describe("An error message is rendered and also contains the input.", function () {
 	test("that error message is rendered", () => {
