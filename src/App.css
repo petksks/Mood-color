@@ -125,7 +125,6 @@
 }
 
 .footer{
-    border-top: 2px solid rgb(54, 54, 54);
     width: 100%;
     display: flex;
     padding: 50px;
@@ -133,6 +132,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 5px;
+    background-color: rgb(233, 233, 233)
 }
 
 .footer a {
