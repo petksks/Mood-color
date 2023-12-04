@@ -22,12 +22,17 @@ function App() {
     setIdCounter((prevIdCounter) => prevIdCounter + 1);
   };
 
+  const handleDeleteColor = (id) => {
+    const updatedColors = colors.filter((color) => color.id !== id);
+    setColors(updatedColors);
+  };
+
   return (
     <div className='app'>
       <Header className="App-header" title='Mood Color' data-testid='header-component'/>
       <section className='color-section'>
         <AddColor onColorArrayChange={handleColorArrayChange}/>
-        <ListItems colorArray={colors} data-testid='color-container' />
+        <ListItems colorArray={colors} data-testid='color-container' onDeleteColor={handleDeleteColor} />
       </section>
       <Footer data-testid='footer-component'/>
     </div>
