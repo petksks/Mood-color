@@ -23,10 +23,12 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className='app'>
       <Header className="App-header" title='Mood Color' data-testid='header-component'/>
-      <ListItems colorArray={colors} data-testid='color-container' />
-      <AddColor onColorArrayChange={handleColorArrayChange}/>
+      <section className='color-section'>
+        <AddColor onColorArrayChange={handleColorArrayChange}/>
+        <ListItems colorArray={colors} data-testid='color-container' />
+      </section>
       <Footer data-testid='footer-component'/>
     </div>
   );

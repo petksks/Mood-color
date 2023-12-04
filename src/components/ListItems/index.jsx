@@ -3,19 +3,21 @@ import React from "react";
 const ListItems = ({ colorArray }) => {
 
   return (
-      <div data-testid="color-container">
+      <div data-testid="color-container" className="color-container">
         {colorArray &&
           colorArray.map((colorObj) => (
-            <div key={colorObj.id} data-testid='color-item'>
+            <div key={colorObj.id} data-testid='color-item' className='color-item'>
              <div
                 style={{
                   backgroundColor: colorObj.color,
                   width: "50px",
                   height: "50px",
                 }}
-                data-testid={`color-box-${colorObj.id}`} 
+                data-testid={`color-box-${colorObj.id}`}
+                className='color'
               ></div>
             <span>{colorObj.id}</span>
+            <h5>{colorObj.color}</h5>
           </div>
           ))}
       </div>

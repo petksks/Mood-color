@@ -1,0 +1,130 @@
+.app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header h1{
+    margin: 50px 20px 0 20px; 
+    font-size: 8rem;
+    text-align: center;
+}
+
+.header h2{
+    margin: 0;
+}
+
+.color-section{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.color-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 480px;
+    margin: 100px 20px;
+}
+
+.color {
+    border-radius: 100%;
+    box-shadow: 3px 3px 0px 0px #9090903d;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.color-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.color-item span{
+    text-transform: uppercase;
+    font-size: 0.5rem;
+    font-weight: 800;
+    color: black;
+    margin-top: 5px;
+    letter-spacing: 0.05rem;
+}
+
+.color-item h5{
+    position: absolute;
+    color: rgba(255, 255, 255, 0.444);
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    top: 14px;
+}
+
+.add-color-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    position: relative;
+}
+
+.add-color-container label{
+    font-weight: 600;
+}
+
+.add-color-container input{
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid gray;
+    background-color: transparent;
+    outline: none;
+}
+
+.add-color-container input::placeholder{
+    color: rgb(180, 180, 180);
+}
+
+.add-color-container button{
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.add-color-container button:hover{
+    background-color: rgb(106, 106, 106);
+}
+
+.footer{
+    background-color: rgb(54, 54, 54);
+    padding: 50px;
+    text-align: center;
+    width: 100vw;
+}
+
+.footer a {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.error-messege{
+    position: absolute;
+    bottom: -25px;
+    font-size: 0.8rem;
+}

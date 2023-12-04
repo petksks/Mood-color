@@ -1,6 +1,6 @@
 const ErrorMessage = ({ input }) => {
   return (
-    <div data-testid="error-message" style={{ display: 'block', color: 'red' }}>
+    <div className="error-messege" data-testid="error-message" style={{ display: 'block', color: 'red' }}>
       Invalid color: {input}
     </div>
   );

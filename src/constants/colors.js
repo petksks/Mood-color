@@ -2,12 +2,12 @@ export const Color = [
   { 
     id: "Color 1", 
     title: "Color One", 
-    color: "#FF8FFF" 
+    color: "#FF0000" 
   },
   { 
     id: "Color 2", 
     title: "Color Two", 
-    color: "#FF0000" 
+    color: "#FFdd00" 
   },
   { 
     id: "Color 3", 
@@ -22,7 +22,7 @@ export const Color = [
   { 
     id: "Color 5", 
     title: "Color Five", 
-    color: "#FFFF00" 
+    color:  "#FF00FF" 
   },
 ];
   
